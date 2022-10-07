@@ -1,16 +1,19 @@
 import { ref } from 'vue'
+import useApi from '@/composables/useApi'
 
 const characters = ref([])
+const api = useApi()
+const page = ref(1)
 
 const useCharacters = () => {
-  const fetchCharacters = () => {
-    for (let index = 0; index < 12; index++) {
-      characters.value.push({
-        _id: characters.value.length,
-        name: `Character ${characters.value.length}`,
-        imageUrl: 'https://via.placeholder.com/400x800',
-      })
-    }
+  const fetchCharacters = async () => {
+    const { data } = await api.instance.get('/characters', {
+      params: {
+        page: page.value,
+      },
+    })
+    characters.value.push(...data.data)
+    page.value++
   }
   return { characters, fetchCharacters }
 }
