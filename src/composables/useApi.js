@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const instance = axios.create({
-  baseURL: 'https://api.disneyapi.dev/',
+  baseURL: 'https://ghibliapi.herokuapp.com',
 })
 
 const useApi = () => {
