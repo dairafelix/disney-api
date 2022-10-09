@@ -21,7 +21,7 @@
   >
     🎥
   </button>
-  <main class="min-h-screen bg-gradient-to-r from-blue-300 to-blue-500">
+  <main class="min-h-screen bg-gradient-to-r from-blue-200 to-blue-600">
     <div class="container mx-auto grid p-2">
       <img src="https://thewarwhoop.com/wp-content/uploads/2018/05/ghibli_logo_gold.png" alt="studioGhibliLogo" />
     </div>
