@@ -16,13 +16,16 @@
 <template>
   <button
     title="Load Films"
-    class="z-90 fixed bottom-8 right-8 flex h-20 w-20 items-center justify-center rounded-full bg-pink-300 text-4xl text-white drop-shadow-lg duration-300 hover:scale-110 hover:bg-green-700 hover:drop-shadow-2xl"
+    class="z-90 fixed bottom-8 right-8 flex h-20 w-20 items-center justify-center rounded-full bg-pink-300 text-4xl text-white drop-shadow-lg duration-300 hover:scale-110 hover:bg-white hover:drop-shadow-2xl"
     @click="fetchFilms"
   >
     🎥
   </button>
-  <main class="min-h-screen bg-gradient-to-r from-green-400 to-blue-500">
-    <div class="container mx-auto grid grid-cols-8 gap-4 py-8">
+  <main class="min-h-screen bg-gradient-to-r from-blue-300 to-blue-500">
+    <div class="container mx-auto grid p-2">
+      <img src="https://thewarwhoop.com/wp-content/uploads/2018/05/ghibli_logo_gold.png" alt="studioGhibliLogo" />
+    </div>
+    <div class="container mx-auto grid grid-cols-4 gap-4 py-8">
       <BaseCard v-for="film in films" :key="film.id" :film="film" />
     </div>
   </main>
